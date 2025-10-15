@@ -162,13 +162,13 @@ export default function HeroSection({
           >
             <div className="relative">
               <Image
-                src="/image3.jpeg"
+                src="/hairetsu.png"
                 alt="Thomas Whidden"
                 className={`${
                   isMobile ? "w-48 h-48" : isTablet ? "w-48 h-48" : "w-64 h-64"
                 } rounded-full border-2 border-gray-200 object-cover shadow-lg`}
-                width={128}
-                height={128}
+                width={356}
+                height={356}
                 style={{
                   filter: "grayscale(20%)",
                   transition: "all 0.3s ease",
