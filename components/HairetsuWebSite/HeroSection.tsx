@@ -154,7 +154,6 @@ export default function HeroSection({
             </div>
           </div>
 
-          {/* Profile Image */}
           <div
             className={`${
               isMobile ? "order-1" : isDesktop ? "order-2" : "order-1"
