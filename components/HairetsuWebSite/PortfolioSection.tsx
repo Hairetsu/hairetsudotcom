@@ -39,7 +39,7 @@ export default function PortfolioSection({
         >
           {/* Notate */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -72,7 +72,7 @@ export default function PortfolioSection({
               </a>
             </div>
             <p
-              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
                 opacity: 0.7,
@@ -82,7 +82,7 @@ export default function PortfolioSection({
               and performance. Analyze documents, webpages, and videos while
               keeping your data under your control.
             </p>
-            <div className="flex flex-wrap gap-1 sm:gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
                 className="px-2 py-1 text-xs rounded-full"
                 style={{
@@ -127,10 +127,98 @@ export default function PortfolioSection({
           </div>
 
           {/* Decipher */}
-
+          {/* danielleguelbart.com */}
+          <div
+            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            style={{
+              backgroundColor: "var(--window-bg)",
+              borderColor: "var(--window-border)",
+            }}
+          >
+            <div className="flex items-center justify-between mb-2 sm:mb-3">
+              <a
+                href="https://www.danielleguelbart.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                style={{
+                  color: "var(--taskbar-text)",
+                }}
+              >
+                Danielle Guelbart
+              </a>
+              <a
+                href="https://www.danielleguelbart.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.7,
+                }}
+              >
+                →
+              </a>
+            </div>
+            <p
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
+              style={{
+                color: "var(--taskbar-text)",
+                opacity: 0.7,
+              }}
+            >
+              Portfolio and webstore for a New York based illustrator and
+              photographer inspired by medieval manuscripts, history, and
+              nature. Features integrated e-commerce with print-on-demand
+              fulfillment and secure payment processing.
+            </p>
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
+              <span
+                className="px-2 py-1 text-xs rounded-full"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Next.js
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Stripe
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Printify
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Convex
+              </span>
+            </div>
+          </div>
           {/* Hiring.fm */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -163,7 +251,7 @@ export default function PortfolioSection({
               </a>
             </div>
             <p
-              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
                 opacity: 0.7,
@@ -173,7 +261,7 @@ export default function PortfolioSection({
               employers. Features 5.4M+ opportunities, user profiles, and resume
               tools to streamline career journeys.
             </p>
-            <div className="flex flex-wrap gap-1 sm:gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
                 className="px-2 py-1 text-xs rounded-full"
                 style={{
@@ -209,7 +297,7 @@ export default function PortfolioSection({
 
           {/* Not T3 Chat */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -242,7 +330,7 @@ export default function PortfolioSection({
               </a>
             </div>
             <p
-              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
                 opacity: 0.7,
@@ -252,7 +340,7 @@ export default function PortfolioSection({
               multiple AI providers, conversation branching, and retry
               functionality with a modern Next.js 15 architecture.
             </p>
-            <div className="flex flex-wrap gap-1 sm:gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
                 className="px-2 py-1 text-xs rounded-full"
                 style={{
@@ -298,7 +386,7 @@ export default function PortfolioSection({
 
           {/* Hairetsu.com */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -331,7 +419,7 @@ export default function PortfolioSection({
               </a>
             </div>
             <p
-              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
                 opacity: 0.7,
@@ -341,7 +429,7 @@ export default function PortfolioSection({
               Built with modern React patterns, responsive design, and a unique
               desktop-style interface for an engaging user experience.
             </p>
-            <div className="flex flex-wrap gap-1 sm:gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
                 className="px-2 py-1 text-xs rounded-full"
                 style={{
@@ -387,7 +475,7 @@ export default function PortfolioSection({
 
           {/* Vocals.dev */}
           <div
-            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -408,7 +496,7 @@ export default function PortfolioSection({
                 Under Development
               </span>
             </div>
-            <div className="pt-6">
+            <div className="pt-6 flex flex-col flex-grow">
               <div className="flex items-center justify-between mb-2 sm:mb-3">
                 <a
                   href="https://www.vocals.dev/"
@@ -436,7 +524,7 @@ export default function PortfolioSection({
                 </a>
               </div>
               <p
-                className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+                className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
                 style={{
                   color: "var(--taskbar-text)",
                   opacity: 0.7,
@@ -446,7 +534,7 @@ export default function PortfolioSection({
                 and interactive applications in minutes with SDK kits and
                 developer-focused tools. Currently in closed beta.
               </p>
-              <div className="flex flex-wrap gap-1 sm:gap-2">
+              <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span
                   className="px-2 py-1 text-xs rounded-full"
                   style={{
@@ -491,7 +579,7 @@ export default function PortfolioSection({
             </div>
           </div>
           <div
-            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm"
+            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -512,7 +600,7 @@ export default function PortfolioSection({
                 Under Development
               </span>
             </div>
-            <div className="pt-6">
+            <div className="pt-6 flex flex-col flex-grow">
               <div className="flex items-center justify-between mb-2 sm:mb-3">
                 <a
                   href="https://decipher.hairetsu.com"
@@ -540,7 +628,7 @@ export default function PortfolioSection({
                 </a>
               </div>
               <p
-                className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4"
+                className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
                 style={{
                   color: "var(--taskbar-text)",
                   opacity: 0.7,
@@ -550,7 +638,7 @@ export default function PortfolioSection({
                 from fraud and spam. Features real-time monitoring and custom ML
                 models, handling millions of daily requests.
               </p>
-              <div className="flex flex-wrap gap-1 sm:gap-2">
+              <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span
                   className="px-2 py-1 text-xs rounded-full"
                   style={{
