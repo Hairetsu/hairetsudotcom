@@ -10,26 +10,37 @@ export function DesktopIconComponent({
   const IconComponent = icon.icon;
   return (
     <div
-      className="flex flex-col items-center gap-2 p-3 rounded-xl cursor-pointer group w-24 transition-all duration-200 hover:scale-105"
+      className="flex flex-col items-center gap-2.5 p-3 rounded-xl cursor-pointer group w-24 transition-all duration-300 hover:scale-110 border-2"
       style={{
         backgroundColor: "var(--desktop-overlay-start)",
-        backdropFilter: "blur(8px)",
+        backdropFilter: "blur(12px)",
+        borderColor: "transparent",
       }}
       onDoubleClick={onDoubleClick}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "var(--color-purple-400)";
+        e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "transparent";
+        e.currentTarget.style.backgroundColor = "var(--desktop-overlay-start)";
+      }}
     >
       <div
-        className="p-3 rounded-xl transition-all duration-200 shadow-lg backdrop-blur-sm"
+        className="p-3.5 rounded-xl transition-all duration-300 shadow-xl backdrop-blur-sm"
         style={{
           background:
             "linear-gradient(135deg, var(--taskbar-hover), var(--window-bg))",
-          border: "1px solid var(--window-border)",
-          color: "var(--taskbar-text)",
+          border: "2px solid var(--window-border)",
         }}
       >
-        <IconComponent size={32} className="text-inherit" />
+        <IconComponent 
+          size={36} 
+          style={{ color: "var(--color-purple-400)" }}
+        />
       </div>
       <span
-        className="text-xs text-center leading-tight px-2 py-1 rounded-lg font-medium transition-all duration-200 group-hover:scale-105"
+        className="text-xs text-center leading-tight px-2 py-1.5 rounded-lg font-semibold transition-all duration-300 shadow-md"
         style={{
           color: "var(--taskbar-text)",
           backgroundColor: "var(--taskbar-hover)",

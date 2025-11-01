@@ -54,7 +54,7 @@ export function ContextMenu({ items, position, onClose }: ContextMenuProps) {
 
   return (
     <div
-      className="fixed z-[1000] min-w-48 rounded-lg shadow-2xl backdrop-blur-sm border"
+      className="fixed z-[1000] min-w-56 rounded-xl shadow-2xl backdrop-blur-xl border-2"
       style={{
         left: position.x,
         top: position.y,
@@ -68,7 +68,7 @@ export function ContextMenu({ items, position, onClose }: ContextMenuProps) {
           <div key={index}>
             {item.separator && (
               <div
-                className="h-px my-1 mx-2"
+                className="h-0.5 my-2 mx-3"
                 style={{ backgroundColor: "var(--window-border)" }}
               />
             )}
@@ -80,15 +80,31 @@ export function ContextMenu({ items, position, onClose }: ContextMenuProps) {
                 }
               }}
               disabled={item.disabled}
-              className="w-full px-4 py-2 text-left text-sm flex items-center gap-3 hover:opacity-80 transition-opacity"
-              style={{ color: "var(--taskbar-text)" }}
+              className="w-full px-4 py-2.5 text-left text-sm font-medium flex items-center gap-3 transition-all duration-200 rounded-lg mx-1"
+              style={{ 
+                color: item.disabled ? "var(--taskbar-text)" : "var(--taskbar-text)",
+                opacity: item.disabled ? 0.4 : 1,
+              }}
+              onMouseEnter={(e) => {
+                if (!item.disabled) {
+                  e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+                  e.currentTarget.style.transform = "scale(0.98)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!item.disabled) {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.transform = "scale(1)";
+                }
+              }}
             >
               {item.icon && (
                 <item.icon
-                  size={16}
-                  className={
-                    item.disabled ? "text-slate-500" : "text-slate-400"
-                  }
+                  size={18}
+                  style={{ 
+                    color: item.disabled ? "var(--taskbar-text)" : "var(--color-purple-400)",
+                    opacity: item.disabled ? 0.4 : 0.8,
+                  }}
                 />
               )}
               {item.label}

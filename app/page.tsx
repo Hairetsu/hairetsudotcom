@@ -243,9 +243,19 @@ function LinuxDesktopContent() {
         className="absolute inset-0"
         style={{
           background: `linear-gradient(135deg, var(--desktop-overlay-start), var(--desktop-overlay-mid), var(--desktop-overlay-end))`,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='120' height='120' fill='url(%23grid)' /%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='120' height='120' fill='url(%23grid)' /%3E%3C/svg%3E")`,
         }}
-      />
+      >
+        {/* Subtle gradient overlay for depth */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, transparent 0%, var(--desktop-bg-start) 100%)",
+            opacity: 0.3,
+          }}
+        />
+      </div>
       {/* Floating orbs for ambiance */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -289,38 +299,45 @@ function LinuxDesktopContent() {
 
       {/* Taskbar */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-12 backdrop-blur-sm flex items-center justify-between px-4 shadow-2xl"
+        className="absolute bottom-0 left-0 right-0 h-14 backdrop-blur-md flex items-center justify-between px-4 shadow-2xl"
         style={{
           background: "var(--taskbar-bg)",
-          borderTop: `1px solid var(--taskbar-border)`,
+          borderTop: `2px solid var(--taskbar-border)`,
         }}
       >
         {/* Start Menu */}
         <div className="relative">
           <button
             onClick={() => setShowStartMenu(!showStartMenu)}
-            className="h-9 px-3 text-sm font-medium flex items-center gap-2 transition-all duration-200 border"
+            className="h-10 px-4 text-sm font-semibold flex items-center gap-2.5 transition-all duration-200 border hover:scale-105 rounded-lg"
             style={{
               backgroundColor: showStartMenu
-                ? "var(--taskbar-hover)"
+                ? "var(--color-purple-600)"
                 : "var(--taskbar-bg)",
-              color: "var(--taskbar-text)",
-              borderColor: "var(--taskbar-border)",
-              borderRadius: "4px",
+              color: showStartMenu ? "white" : "var(--color-purple-400)",
+              borderColor: showStartMenu
+                ? "transparent"
+                : "var(--color-purple-400)",
+              borderWidth: "2px",
             }}
             onMouseEnter={(e) => {
               if (!showStartMenu) {
-                e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+                e.currentTarget.style.backgroundColor =
+                  "var(--color-purple-600)";
+                e.currentTarget.style.color = "white";
+                e.currentTarget.style.borderColor = "transparent";
               }
             }}
             onMouseLeave={(e) => {
               if (!showStartMenu) {
                 e.currentTarget.style.backgroundColor = "var(--taskbar-bg)";
+                e.currentTarget.style.color = "var(--color-purple-400)";
+                e.currentTarget.style.borderColor = "var(--color-purple-400)";
               }
             }}
           >
-            <Grid3X3 size={16} />
-            Applications
+            <Grid3X3 size={18} />
+            Hairetsu OS
           </button>
 
           {showStartMenu && (
@@ -342,18 +359,18 @@ function LinuxDesktopContent() {
         </div>
 
         {/* Active Windows */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-1 justify-center">
           {windows
             .filter((w) => !w.isMinimized)
             .map((window) => (
               <button
                 key={window.id}
                 onClick={() => focusWindow(window.id)}
-                className="px-4 py-2 text-sm rounded-lg max-w-40 truncate transition-all duration-200 hover:scale-105 backdrop-blur-sm"
+                className="px-4 py-2 text-sm font-medium rounded-lg max-w-48 truncate transition-all duration-200 hover:scale-105 backdrop-blur-sm"
                 style={{
                   backgroundColor: "var(--taskbar-hover)",
                   color: "var(--taskbar-text)",
-                  border: `1px solid var(--taskbar-border)`,
+                  border: `2px solid var(--window-border)`,
                 }}
               >
                 {window.title}
@@ -368,28 +385,40 @@ function LinuxDesktopContent() {
         >
           <div className="flex items-center gap-3">
             <Volume2
-              size={18}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              size={20}
+              className="hover:scale-110 transition-all duration-200 cursor-pointer hover:text-purple-400"
+              style={{ opacity: 0.8 }}
             />
             <Wifi
-              size={18}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              size={20}
+              className="hover:scale-110 transition-all duration-200 cursor-pointer hover:text-purple-400"
+              style={{ opacity: 0.8 }}
             />
             <Battery
-              size={18}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              size={20}
+              className="hover:scale-110 transition-all duration-200 cursor-pointer hover:text-purple-400"
+              style={{ opacity: 0.8 }}
             />
           </div>
           <div
-            className="text-sm font-medium px-3 py-1 rounded-lg"
+            className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border-2"
             style={{
               backgroundColor: "var(--taskbar-hover)",
+              borderColor: "var(--window-border)",
             }}
           >
-            {time.toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
+            <div>
+              {time.toLocaleDateString([], {
+                month: "short",
+                day: "numeric",
+              })}
+            </div>
+            <div className="text-xs opacity-70">
+              {time.toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -440,8 +469,34 @@ export default function LinuxDesktop() {
 
   if (isLoading) {
     return (
-      <div className="h-screen w-screen flex items-center justify-center bg-gray-900">
-        <div className="text-white">Loading...</div>
+      <div
+        className="h-screen w-screen flex flex-col items-center justify-center"
+        style={{
+          background:
+            "linear-gradient(135deg, var(--desktop-bg-start), var(--desktop-bg-mid), var(--desktop-bg-end))",
+        }}
+      >
+        <div className="mb-8">
+          <div
+            className="w-16 h-16 rounded-full animate-spin"
+            style={{
+              border: "4px solid var(--window-border)",
+              borderTopColor: "var(--color-purple-600)",
+            }}
+          ></div>
+        </div>
+        <h2
+          className="text-2xl font-bold mb-2"
+          style={{ color: "var(--color-purple-400)" }}
+        >
+          Hairetsu OS
+        </h2>
+        <p
+          className="text-sm font-medium"
+          style={{ color: "var(--taskbar-text)", opacity: 0.7 }}
+        >
+          Initializing desktop environment...
+        </p>
       </div>
     );
   }

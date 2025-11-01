@@ -39,7 +39,7 @@ export default function PortfolioSection({
         >
           {/* Notate */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -50,7 +50,7 @@ export default function PortfolioSection({
                 href="https://notate.hairetsu.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                 style={{
                   color: "var(--taskbar-text)",
                 }}
@@ -61,30 +61,39 @@ export default function PortfolioSection({
                 href="https://notate.hairetsu.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: "var(--taskbar-text)",
-                  color: "var(--window-bg)",
-                  opacity: 0.7,
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
                 }}
               >
-                →
+                Visit →
               </a>
             </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              AI Research Assistant
+            </p>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
-                opacity: 0.7,
+                opacity: 0.8,
               }}
             >
-              Cross-platform AI research assistant that analyzes documents,
-              webpages, and videos. Privacy-first architecture keeps your data
-              local and secure.
+              Cross-platform desktop application enabling researchers to analyze
+              documents, webpages, and videos using AI—all while maintaining
+              complete data privacy with local-first architecture. Built for
+              power users who refuse to compromise on security.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -94,7 +103,7 @@ export default function PortfolioSection({
                 Python
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -104,7 +113,7 @@ export default function PortfolioSection({
                 TypeScript
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -114,7 +123,7 @@ export default function PortfolioSection({
                 Electron
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -126,10 +135,9 @@ export default function PortfolioSection({
             </div>
           </div>
 
-          {/* Decipher */}
           {/* danielleguelbart.com */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -140,7 +148,7 @@ export default function PortfolioSection({
                 href="https://www.danielleguelbart.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                 style={{
                   color: "var(--taskbar-text)",
                 }}
@@ -151,30 +159,39 @@ export default function PortfolioSection({
                 href="https://www.danielleguelbart.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: "var(--taskbar-text)",
-                  color: "var(--window-bg)",
-                  opacity: 0.7,
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
                 }}
               >
-                →
+                Visit →
               </a>
             </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              E-Commerce Portfolio
+            </p>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
-                opacity: 0.7,
+                opacity: 0.8,
               }}
             >
-              Portfolio and webstore for New York illustrator and photographer.
-              Full e-commerce integration with print-on-demand fulfillment and
-              Stripe payments.
+              Full-stack e-commerce platform for NYC-based illustrator and
+              photographer. Seamless integration with Stripe payment processing,
+              print-on-demand fulfillment, and real-time inventory management.
+              Built for artists who want to sell their work professionally.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -184,7 +201,7 @@ export default function PortfolioSection({
                 Next.js
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -194,7 +211,7 @@ export default function PortfolioSection({
                 Stripe
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -204,7 +221,7 @@ export default function PortfolioSection({
                 Printify
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -217,7 +234,7 @@ export default function PortfolioSection({
           </div>
           {/* Hiring.fm */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -228,7 +245,7 @@ export default function PortfolioSection({
                 href="https://hiring.fm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                 style={{
                   color: "var(--taskbar-text)",
                 }}
@@ -239,29 +256,39 @@ export default function PortfolioSection({
                 href="https://hiring.fm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: "var(--taskbar-text)",
-                  color: "var(--window-bg)",
-                  opacity: 0.7,
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
                 }}
               >
-                →
+                Visit →
               </a>
             </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              Job Search Engine
+            </p>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
-                opacity: 0.7,
+                opacity: 0.8,
               }}
             >
-              Job search platform with 5.4M+ opportunities. User profiles and
-              resume tools that streamline the entire career journey.
+              High-performance job search platform aggregating 5.4M+
+              opportunities from multiple sources. Features intelligent
+              matching, user profiles, and resume tools—architected to handle
+              millions of daily searches with sub-second response times.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -271,7 +298,7 @@ export default function PortfolioSection({
                 Next.js
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -281,7 +308,7 @@ export default function PortfolioSection({
                 MySQL
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -295,7 +322,7 @@ export default function PortfolioSection({
 
           {/* Not T3 Chat */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -303,10 +330,10 @@ export default function PortfolioSection({
           >
             <div className="flex items-center justify-between mb-2 sm:mb-3">
               <a
-                href="https://github.com/Hairetsucodes/NOT-T3-Chat"
+                href="https://github.com/hairetsu/NOT-T3-Chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                 style={{
                   color: "var(--taskbar-text)",
                 }}
@@ -314,33 +341,43 @@ export default function PortfolioSection({
                 Not T3 Chat
               </a>
               <a
-                href="https://github.com/Hairetsucodes/NOT-T3-Chat"
+                href="https://github.com/hairetsu/NOT-T3-Chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: "var(--taskbar-text)",
-                  color: "var(--window-bg)",
-                  opacity: 0.7,
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
                 }}
               >
-                →
+                GitHub →
               </a>
             </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              Open Source AI Chat
+            </p>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
-                opacity: 0.7,
+                opacity: 0.8,
               }}
             >
-              Open-source T3.Chat clone for their cloneathon. Multiple AI
-              providers, conversation branching, and retry functionality on
-              Next.js 15.
+              Full-featured AI chat application built for T3.Chat&apos;s
+              cloneathon competition. Multi-provider support (OpenAI, Anthropic,
+              Gemini), conversation branching, and intelligent retry logic—all
+              on Next.js 15&apos;s latest features with type-safe database
+              access.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -350,7 +387,7 @@ export default function PortfolioSection({
                 Next.js 15
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -360,7 +397,7 @@ export default function PortfolioSection({
                 TypeScript
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -370,7 +407,7 @@ export default function PortfolioSection({
                 Prisma
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -384,7 +421,7 @@ export default function PortfolioSection({
 
           {/* Hairetsu.com */}
           <div
-            className="p-4 sm:p-6 rounded-lg border transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
@@ -392,10 +429,10 @@ export default function PortfolioSection({
           >
             <div className="flex items-center justify-between mb-2 sm:mb-3">
               <a
-                href="https://github.com/Hairetsucodes/hairetsudotcom"
+                href="https://github.com/hairetsu/hairetsudotcom"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                 style={{
                   color: "var(--taskbar-text)",
                 }}
@@ -403,33 +440,42 @@ export default function PortfolioSection({
                 Hairetsu.com
               </a>
               <a
-                href="https://github.com/Hairetsucodes/hairetsudotcom"
+                href="https://github.com/hairetsu/hairetsudotcom"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: "var(--taskbar-text)",
-                  color: "var(--window-bg)",
-                  opacity: 0.7,
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
                 }}
               >
-                →
+                GitHub →
               </a>
             </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              Interactive Portfolio
+            </p>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
               style={{
                 color: "var(--taskbar-text)",
-                opacity: 0.7,
+                opacity: 0.8,
               }}
             >
-              Open-source web portfolio with a desktop-style interface. Modern
-              React patterns and responsive design create an engaging,
-              interactive experience.
+              Open-source portfolio featuring a fully functional desktop OS
+              interface in the browser. Demonstrates advanced React patterns,
+              state management, and responsive design—creating an engaging,
+              memorable user experience that stands out.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -439,7 +485,7 @@ export default function PortfolioSection({
                 Next.js
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -449,7 +495,7 @@ export default function PortfolioSection({
                 TypeScript
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -459,7 +505,7 @@ export default function PortfolioSection({
                 React
               </span>
               <span
-                className="px-2 py-1 text-xs rounded-full"
+                className="px-2 py-1 text-xs rounded-full font-medium"
                 style={{
                   backgroundColor: "var(--taskbar-text)",
                   color: "var(--window-bg)",
@@ -473,22 +519,22 @@ export default function PortfolioSection({
 
           {/* Vocals.dev */}
           <div
-            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border relative transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
             }}
           >
-            <div className="absolute top-3 left-0 right-0 flex justify-center">
+            <div className="absolute top-3 left-0 right-0 flex justify-center z-10">
               <span
                 className="text-xs px-3 py-1 rounded-full border backdrop-blur-sm"
                 style={{
-                  backgroundColor: "rgba(255, 165, 0, 0.15)",
-                  borderColor: "rgba(255, 165, 0, 0.3)",
+                  backgroundColor: "rgba(255, 165, 0, 0.2)",
+                  borderColor: "rgba(255, 165, 0, 0.4)",
                   color: "var(--taskbar-text)",
                   fontSize: "0.65rem",
-                  fontWeight: "500",
-                  opacity: 0.9,
+                  fontWeight: "600",
+                  opacity: 0.95,
                 }}
               >
                 Under Development
@@ -500,7 +546,7 @@ export default function PortfolioSection({
                   href="https://www.vocals.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                  className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                   style={{
                     color: "var(--taskbar-text)",
                   }}
@@ -511,30 +557,39 @@ export default function PortfolioSection({
                   href="https://www.vocals.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                  className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                   style={{
-                    backgroundColor: "var(--taskbar-text)",
-                    color: "var(--window-bg)",
-                    opacity: 0.7,
+                    backgroundColor: "var(--color-purple-600)",
+                    color: "white",
                   }}
                 >
-                  →
+                  Visit →
                 </a>
               </div>
+              <p
+                className="text-xs sm:text-sm font-medium mb-2"
+                style={{
+                  color: "var(--color-purple-400)",
+                  opacity: 0.9,
+                }}
+              >
+                Voice AI SDK Platform
+              </p>
               <p
                 className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
                 style={{
                   color: "var(--taskbar-text)",
-                  opacity: 0.7,
+                  opacity: 0.8,
                 }}
               >
-                Voice AI platform for developers. SDK kits and developer tools
-                to build custom voice chatbots and interactive applications in
-                minutes. Currently in closed beta.
+                Developer-first voice AI platform providing SDKs and tools to
+                build custom voice chatbots and interactive applications.
+                Real-time speech processing with enterprise-grade reliability.
+                Currently in closed beta with select partners.
               </p>
               <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -544,7 +599,7 @@ export default function PortfolioSection({
                   Voice AI
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -554,7 +609,7 @@ export default function PortfolioSection({
                   SDK
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -564,7 +619,7 @@ export default function PortfolioSection({
                   Speech-to-Text
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -577,22 +632,22 @@ export default function PortfolioSection({
             </div>
           </div>
           <div
-            className="p-4 sm:p-6 rounded-lg border relative transition-all duration-200 hover:shadow-sm flex flex-col"
+            className="group p-4 sm:p-6 rounded-lg border relative transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
               backgroundColor: "var(--window-bg)",
               borderColor: "var(--window-border)",
             }}
           >
-            <div className="absolute top-3 left-0 right-0 flex justify-center">
+            <div className="absolute top-3 left-0 right-0 flex justify-center z-10">
               <span
                 className="text-xs px-3 py-1 rounded-full border backdrop-blur-sm"
                 style={{
-                  backgroundColor: "rgba(255, 165, 0, 0.15)",
-                  borderColor: "rgba(255, 165, 0, 0.3)",
+                  backgroundColor: "rgba(255, 165, 0, 0.2)",
+                  borderColor: "rgba(255, 165, 0, 0.4)",
                   color: "var(--taskbar-text)",
                   fontSize: "0.65rem",
-                  fontWeight: "500",
-                  opacity: 0.9,
+                  fontWeight: "600",
+                  opacity: 0.95,
                 }}
               >
                 Under Development
@@ -604,7 +659,7 @@ export default function PortfolioSection({
                   href="https://decipher.hairetsu.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base sm:text-lg font-medium transition-colors hover:underline"
+                  className="text-base sm:text-lg font-semibold transition-colors hover:underline"
                   style={{
                     color: "var(--taskbar-text)",
                   }}
@@ -615,30 +670,40 @@ export default function PortfolioSection({
                   href="https://decipher.hairetsu.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 rounded transition-all duration-200 hover:opacity-70"
+                  className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
                   style={{
-                    backgroundColor: "var(--taskbar-text)",
-                    color: "var(--window-bg)",
-                    opacity: 0.7,
+                    backgroundColor: "var(--color-purple-600)",
+                    color: "white",
                   }}
                 >
-                  →
+                  Visit →
                 </a>
               </div>
+              <p
+                className="text-xs sm:text-sm font-medium mb-2"
+                style={{
+                  color: "var(--color-purple-400)",
+                  opacity: 0.9,
+                }}
+              >
+                ML-Powered Fraud Detection
+              </p>
               <p
                 className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
                 style={{
                   color: "var(--taskbar-text)",
-                  opacity: 0.7,
+                  opacity: 0.8,
                 }}
               >
-                Server-side fraud and spam protection for high-traffic
-                applications. Real-time monitoring with custom ML models handles
-                millions of daily requests.
+                Enterprise fraud and spam protection system built for
+                high-traffic applications. Custom ML models provide real-time
+                threat detection while processing millions of requests daily.
+                Low-latency architecture ensures security without compromising
+                user experience.
               </p>
               <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -648,7 +713,7 @@ export default function PortfolioSection({
                   Python
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -658,7 +723,7 @@ export default function PortfolioSection({
                   Next.js
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",
@@ -668,7 +733,7 @@ export default function PortfolioSection({
                   Elixir
                 </span>
                 <span
-                  className="px-2 py-1 text-xs rounded-full"
+                  className="px-2 py-1 text-xs rounded-full font-medium"
                   style={{
                     backgroundColor: "var(--taskbar-text)",
                     color: "var(--window-bg)",

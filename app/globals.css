@@ -130,6 +130,10 @@
   --color-emerald-400: oklch(0.7 0.15 155);
   --color-orange-400: oklch(0.75 0.15 55);
   --color-red-600: oklch(0.55 0.22 25);
+
+  /* Brand Colors - Light */
+  --color-purple-400: oklch(0.7 0.2 290);
+  --color-purple-600: oklch(0.5 0.25 290);
 }
 
 .dark {
@@ -197,6 +201,10 @@
   --color-emerald-400: oklch(0.7 0.15 155);
   --color-orange-400: oklch(0.75 0.15 55);
   --color-red-600: oklch(0.55 0.22 25);
+
+  /* Brand Colors - Dark */
+  --color-purple-400: oklch(0.75 0.2 290);
+  --color-purple-600: oklch(0.55 0.25 290);
 }
 
 @layer base {

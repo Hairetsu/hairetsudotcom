@@ -280,43 +280,81 @@ export function StartMenu({
   return (
     <div
       ref={menuRef}
-      className="absolute bottom-12 left-0 w-96 bg-slate-900/95 backdrop-blur-sm border border-slate-600/30 rounded-xl shadow-2xl z-[10000]"
+      className="absolute bottom-16 left-0 w-96 backdrop-blur-xl border-2 rounded-2xl shadow-2xl z-[10000]"
+      style={{
+        backgroundColor: "var(--window-bg)",
+        borderColor: "var(--color-purple-400)",
+      }}
       onClick={(e) => e.stopPropagation()}
     >
       {/* Header */}
-      <div className="p-4 border-b border-slate-600/30">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-            <User size={20} className="text-white" />
+      <div
+        className="p-5 border-b-2"
+        style={{ borderColor: "var(--window-border)" }}
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div
+            className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+            style={{
+              background:
+                "linear-gradient(135deg, var(--color-purple-600), var(--color-purple-400))",
+            }}
+          >
+            <User size={22} className="text-white" />
           </div>
           <div>
-            <div className="text-slate-200 font-semibold">Hairetsu</div>
-            <div className="text-slate-400 text-sm">Linux Desktop</div>
+            <div
+              className="font-bold text-base"
+              style={{ color: "var(--taskbar-text)" }}
+            >
+              Hairetsu OS
+            </div>
+            <div
+              className="text-sm font-medium"
+              style={{ color: "var(--taskbar-text)", opacity: 0.6 }}
+            >
+              Professional Edition
+            </div>
           </div>
         </div>
 
         {/* Search Bar */}
         <div className="relative">
           <Search
-            size={16}
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"
+            size={18}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2"
+            style={{ color: "var(--color-purple-400)", opacity: 0.7 }}
           />
           <input
             type="text"
             placeholder="Search applications..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600/30 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm"
+            className="w-full pl-11 pr-4 py-3 border-2 rounded-lg text-sm font-medium focus:outline-none transition-all duration-200"
+            style={{
+              backgroundColor: "var(--taskbar-hover)",
+              borderColor: "var(--window-border)",
+              color: "var(--taskbar-text)",
+            }}
+            onFocus={(e) => {
+              e.currentTarget.style.borderColor = "var(--color-purple-400)";
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.borderColor = "var(--window-border)";
+            }}
           />
         </div>
       </div>
 
       {/* Applications Grid */}
-      <div className="p-4 max-h-80 overflow-y-auto">
+      <div className="p-5 max-h-80 overflow-y-auto">
         {selectedCategory === "Recent" && recentApps.length === 0 ? (
-          <div className="text-center text-slate-400 py-8">
-            <Clock size={32} className="mx-auto mb-2 opacity-50" />
-            <p>No recent applications</p>
+          <div
+            className="text-center py-8"
+            style={{ color: "var(--taskbar-text)", opacity: 0.6 }}
+          >
+            <Clock size={36} className="mx-auto mb-3 opacity-50" />
+            <p className="font-medium">No recent applications</p>
           </div>
         ) : (
           <div className="grid grid-cols-3 gap-3">
@@ -324,15 +362,32 @@ export function StartMenu({
               <button
                 key={app.id}
                 onClick={() => handleAppClick(app)}
-                className="flex flex-col items-center gap-2 p-3 hover:bg-slate-700/50 rounded-lg transition-all duration-200 hover:scale-105 group"
+                className="flex flex-col items-center gap-2.5 p-3 rounded-xl transition-all duration-200 hover:scale-105 group border-2"
+                style={{
+                  borderColor: "transparent",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor =
+                    "var(--taskbar-hover)";
+                  e.currentTarget.style.borderColor = "var(--color-purple-400)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.borderColor = "transparent";
+                }}
               >
-                <div className="p-2 bg-slate-700/30 rounded-lg group-hover:bg-slate-600/50 transition-colors">
-                  <app.icon
-                    size={24}
-                    className="text-slate-300 group-hover:text-white"
-                  />
+                <div
+                  className="p-3 rounded-xl transition-all duration-200 shadow-md"
+                  style={{
+                    backgroundColor: "var(--taskbar-hover)",
+                  }}
+                >
+                  <app.icon size={28} className="text-purple-400" />
                 </div>
-                <span className="text-xs text-slate-300 text-center leading-tight font-medium">
+                <span
+                  className="text-xs text-center leading-tight font-semibold"
+                  style={{ color: "var(--taskbar-text)" }}
+                >
                   {app.label}
                 </span>
               </button>
@@ -341,26 +396,45 @@ export function StartMenu({
         )}
 
         {filteredApps.length === 0 && searchTerm && (
-          <div className="text-center text-slate-400 py-8">
-            <Search size={32} className="mx-auto mb-2 opacity-50" />
-            <p>No applications found for &quot;{searchTerm}&quot;</p>
+          <div
+            className="text-center py-8"
+            style={{ color: "var(--taskbar-text)", opacity: 0.6 }}
+          >
+            <Search size={36} className="mx-auto mb-3 opacity-50" />
+            <p className="font-medium">
+              No applications found for &quot;{searchTerm}&quot;
+            </p>
           </div>
         )}
       </div>
 
       {/* Footer */}
-      <div className="p-3 border-t border-slate-600/30 flex items-center justify-between">
+      <div
+        className="p-4 border-t-2 flex items-center justify-between"
+        style={{ borderColor: "var(--window-border)" }}
+      >
         <div className="flex gap-2">
           <button
             onClick={() =>
               handleAppClick(applications.find((app) => app.id === "settings")!)
             }
-            className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors group"
+            className="p-2.5 rounded-lg transition-all duration-200 hover:scale-110 border-2"
+            style={{
+              borderColor: "transparent",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+              e.currentTarget.style.borderColor = "var(--color-purple-400)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.borderColor = "transparent";
+            }}
             title="Settings"
           >
             <SettingsIcon
-              size={18}
-              className="text-slate-400 group-hover:text-white"
+              size={20}
+              style={{ color: "var(--taskbar-text)", opacity: 0.8 }}
             />
           </button>
           <button
@@ -375,24 +449,46 @@ export function StartMenu({
               });
               onClose();
             }}
-            className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors group"
+            className="p-2.5 rounded-lg transition-all duration-200 hover:scale-110 border-2"
+            style={{
+              borderColor: "transparent",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+              e.currentTarget.style.borderColor = "var(--color-purple-400)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.borderColor = "transparent";
+            }}
             title="File Manager"
           >
             <Folder
-              size={18}
-              className="text-slate-400 group-hover:text-white"
+              size={20}
+              style={{ color: "var(--taskbar-text)", opacity: 0.8 }}
             />
           </button>
         </div>
 
         <button
           onClick={handlePowerOff}
-          className="p-2 hover:bg-red-600/50 rounded-lg transition-colors group"
+          className="p-2.5 rounded-lg transition-all duration-200 hover:scale-110 border-2"
+          style={{
+            borderColor: "transparent",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "var(--color-red-600)";
+            e.currentTarget.style.borderColor = "var(--color-red-600)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "transparent";
+            e.currentTarget.style.borderColor = "transparent";
+          }}
           title="Power Off"
         >
           <Power
-            size={18}
-            className="text-slate-400 group-hover:text-red-300"
+            size={20}
+            style={{ color: "var(--taskbar-text)", opacity: 0.8 }}
           />
         </button>
       </div>

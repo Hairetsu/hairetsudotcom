@@ -159,7 +159,7 @@ export function WindowComponent({
   return (
     <div
       ref={windowRef}
-      className="absolute shadow-2xl rounded-xl overflow-hidden backdrop-blur-sm"
+      className="absolute shadow-2xl rounded-xl overflow-hidden backdrop-blur-md"
       style={{
         left: window.position.x,
         top: window.position.y,
@@ -167,7 +167,7 @@ export function WindowComponent({
         height: window.isMaximized ? "100vh" : window.size.height,
         zIndex: window.zIndex,
         backgroundColor: "var(--window-bg)",
-        border: "1px solid var(--window-border)",
+        border: "2px solid var(--window-border)",
       }}
       onClick={onFocus}
     >
@@ -222,63 +222,70 @@ export function WindowComponent({
 
       {/* Title Bar */}
       <div
-        className="h-10 px-4 flex items-center justify-between cursor-move select-none"
+        className="h-11 px-4 flex items-center justify-between cursor-move select-none backdrop-blur-sm"
         style={{
           background:
             "linear-gradient(135deg, var(--taskbar-bg), var(--window-bg))",
-          borderBottom: "1px solid var(--window-border)",
+          borderBottom: "2px solid var(--window-border)",
         }}
         onMouseDown={handleMouseDown}
       >
-        <div className="flex items-center gap-2">
-          <Move size={16} style={{ color: "var(--taskbar-text)" }} />
+        <div className="flex items-center gap-2.5">
+          <Move
+            size={16}
+            style={{ color: "var(--color-purple-400)", opacity: 0.7 }}
+          />
           <span
-            className="text-sm font-medium"
+            className="text-sm font-semibold"
             style={{ color: "var(--taskbar-text)" }}
           >
             {window.title}
           </span>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2.5">
           <button
             onClick={(e) => {
               e.stopPropagation();
               onMinimize();
             }}
-            className="w-[1rem] h-[1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-lg"
+            className="w-[1.1rem] h-[1.1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-125 shadow-lg"
             style={{
               backgroundColor: "var(--color-amber-500)",
-              opacity: 0.8,
+              opacity: 0.85,
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "scale(1.25)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.8";
+              e.currentTarget.style.opacity = "0.85";
+              e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            <Minimize2 size={12} style={{ color: "var(--color-amber-900)" }} />
+            <Minimize2 size={11} style={{ color: "var(--color-amber-900)" }} />
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               onMaximize();
             }}
-            className="w-[1rem] h-[1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-lg"
+            className="w-[1.1rem] h-[1.1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-125 shadow-lg"
             style={{
               backgroundColor: "var(--color-emerald-500)",
-              opacity: 0.8,
+              opacity: 0.85,
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "scale(1.25)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.8";
+              e.currentTarget.style.opacity = "0.85";
+              e.currentTarget.style.transform = "scale(1)";
             }}
           >
             <Maximize2
-              size={12}
+              size={11}
               style={{ color: "var(--color-emerald-900)" }}
             />
           </button>
@@ -287,19 +294,21 @@ export function WindowComponent({
               e.stopPropagation();
               onClose();
             }}
-            className="w-[1rem] h-[1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-lg"
+            className="w-[1.1rem] h-[1.1rem] rounded-full flex items-center justify-center transition-all duration-200 hover:scale-125 shadow-lg"
             style={{
               backgroundColor: "var(--color-red-500)",
-              opacity: 0.8,
+              opacity: 0.85,
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "scale(1.25)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.8";
+              e.currentTarget.style.opacity = "0.85";
+              e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            <X size={12} style={{ color: "var(--color-red-900)" }} />
+            <X size={11} style={{ color: "var(--color-red-900)" }} />
           </button>
         </div>
       </div>
@@ -308,7 +317,7 @@ export function WindowComponent({
       <div
         className="overflow-auto"
         style={{
-          height: `calc(100% - 40px)`, // Subtract title bar height (40px)
+          height: `calc(100% - 44px)`, // Subtract title bar height (44px)
         }}
       >
         <window.component />
