@@ -78,9 +78,9 @@ export default function PortfolioSection({
                 opacity: 0.7,
               }}
             >
-              A powerful cross-platform AI research assistant built for privacy
-              and performance. Analyze documents, webpages, and videos while
-              keeping your data under your control.
+              Cross-platform AI research assistant that analyzes documents,
+              webpages, and videos. Privacy-first architecture keeps your data
+              local and secure.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
@@ -168,10 +168,9 @@ export default function PortfolioSection({
                 opacity: 0.7,
               }}
             >
-              Portfolio and webstore for a New York based illustrator and
-              photographer inspired by medieval manuscripts, history, and
-              nature. Features integrated e-commerce with print-on-demand
-              fulfillment and secure payment processing.
+              Portfolio and webstore for New York illustrator and photographer.
+              Full e-commerce integration with print-on-demand fulfillment and
+              Stripe payments.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
@@ -257,9 +256,8 @@ export default function PortfolioSection({
                 opacity: 0.7,
               }}
             >
-              A comprehensive job search platform connecting job seekers with
-              employers. Features 5.4M+ opportunities, user profiles, and resume
-              tools to streamline career journeys.
+              Job search platform with 5.4M+ opportunities. User profiles and
+              resume tools that streamline the entire career journey.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
@@ -336,9 +334,9 @@ export default function PortfolioSection({
                 opacity: 0.7,
               }}
             >
-              An open-source T3.Chat clone built for their cloneathon. Features
-              multiple AI providers, conversation branching, and retry
-              functionality with a modern Next.js 15 architecture.
+              Open-source T3.Chat clone for their cloneathon. Multiple AI
+              providers, conversation branching, and retry functionality on
+              Next.js 15.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
@@ -425,9 +423,9 @@ export default function PortfolioSection({
                 opacity: 0.7,
               }}
             >
-              A fully open-source web portfolio showcasing projects and skills.
-              Built with modern React patterns, responsive design, and a unique
-              desktop-style interface for an engaging user experience.
+              Open-source web portfolio with a desktop-style interface. Modern
+              React patterns and responsive design create an engaging,
+              interactive experience.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
@@ -530,9 +528,9 @@ export default function PortfolioSection({
                   opacity: 0.7,
                 }}
               >
-                Voice AI platform for developers. Build custom voice chatbots
-                and interactive applications in minutes with SDK kits and
-                developer-focused tools. Currently in closed beta.
+                Voice AI platform for developers. SDK kits and developer tools
+                to build custom voice chatbots and interactive applications in
+                minutes. Currently in closed beta.
               </p>
               <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span
@@ -634,9 +632,9 @@ export default function PortfolioSection({
                   opacity: 0.7,
                 }}
               >
-                A robust server-side tool protecting high-traffic applications
-                from fraud and spam. Features real-time monitoring and custom ML
-                models, handling millions of daily requests.
+                Server-side fraud and spam protection for high-traffic
+                applications. Real-time monitoring with custom ML models handles
+                millions of daily requests.
               </p>
               <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
                 <span

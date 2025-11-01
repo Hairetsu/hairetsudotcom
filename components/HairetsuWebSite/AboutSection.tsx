@@ -40,10 +40,9 @@ export default function AboutSection({
               opacity: 0.8,
             }}
           >
-            With over 20 years in the industry, my journey began in hacking and
-            exploiting web vulnerabilities and APIs. This foundation in
-            cybersecurity gave me a unique perspective on building robust,
-            secure systems from the ground up.
+            My career started two decades ago in web security, hacking APIs and
+            finding vulnerabilities. That foundation shaped how I approach
+            development: security-first, robust, and built to scale.
           </p>
           <p
             className="text-sm sm:text-base leading-relaxed mb-3 sm:mb-4"
@@ -52,11 +51,10 @@ export default function AboutSection({
               opacity: 0.8,
             }}
           >
-            This expertise evolved into full stack development, where I&apos;ve
-            built everything from high-traffic fraud detection systems to
-            comprehensive job search platforms. I&apos;m passionate about
-            creating solutions that not only work well but can scale to handle
-            millions of requests.
+            As a full stack developer, I&apos;ve architected systems handling
+            millions of daily requests, from fraud detection platforms to job
+            search engines with over 5.4M+ opportunities. I specialize in
+            building solutions that scale gracefully under pressure.
           </p>
           <p
             className="text-sm sm:text-base leading-relaxed"
@@ -65,10 +63,10 @@ export default function AboutSection({
               opacity: 0.8,
             }}
           >
-            Today, I&apos;m focused on Machine Learning and AI, building tools
-            like Notate that help researchers and analysts work more efficiently
-            while maintaining privacy and data control. Every project is an
-            opportunity to solve real problems with innovative technology.
+            Now focused on Machine Learning and AI, I&apos;m creating tools like
+            Notate that empower researchers while keeping their data private.
+            Every project is a chance to merge cutting-edge technology with
+            real-world impact.
           </p>
         </div>
       </div>

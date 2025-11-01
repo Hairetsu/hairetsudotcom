@@ -86,10 +86,8 @@ export default function HeroSection({
                   opacity: 0.7,
                 }}
               >
-                With over 20 years in the industry, my journey began in hacking
-                and exploiting web vulnerabilities and APIs. This foundation
-                evolved into full stack development, and now encompassing
-                Machine Learning and AI.
+                Building scalable systems and AI tools that solve real problems. 
+                20+ years of experience from web security to machine learning.
               </p>
             </div>
 
