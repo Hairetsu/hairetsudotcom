@@ -34,10 +34,7 @@ export function DesktopIconComponent({
           border: "2px solid var(--window-border)",
         }}
       >
-        <IconComponent 
-          size={36} 
-          style={{ color: "var(--color-purple-400)" }}
-        />
+        <IconComponent size={36} className="text-purple-400 opacity-80" />
       </div>
       <span
         className="text-xs text-center leading-tight px-2 py-1.5 rounded-lg font-semibold transition-all duration-300 shadow-md"

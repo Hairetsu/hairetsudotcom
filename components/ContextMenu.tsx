@@ -81,13 +81,16 @@ export function ContextMenu({ items, position, onClose }: ContextMenuProps) {
               }}
               disabled={item.disabled}
               className="w-full px-4 py-2.5 text-left text-sm font-medium flex items-center gap-3 transition-all duration-200 rounded-lg mx-1"
-              style={{ 
-                color: item.disabled ? "var(--taskbar-text)" : "var(--taskbar-text)",
+              style={{
+                color: item.disabled
+                  ? "var(--taskbar-text)"
+                  : "var(--taskbar-text)",
                 opacity: item.disabled ? 0.4 : 1,
               }}
               onMouseEnter={(e) => {
                 if (!item.disabled) {
-                  e.currentTarget.style.backgroundColor = "var(--taskbar-hover)";
+                  e.currentTarget.style.backgroundColor =
+                    "var(--taskbar-hover)";
                   e.currentTarget.style.transform = "scale(0.98)";
                 }
               }}
@@ -101,10 +104,11 @@ export function ContextMenu({ items, position, onClose }: ContextMenuProps) {
               {item.icon && (
                 <item.icon
                   size={18}
-                  style={{ 
-                    color: item.disabled ? "var(--taskbar-text)" : "var(--color-purple-400)",
-                    opacity: item.disabled ? 0.4 : 0.8,
-                  }}
+                  className={
+                    item.disabled
+                      ? "text-taskbar-text opacity-40"
+                      : "text-purple-400 opacity-80"
+                  }
                 />
               )}
               {item.label}
