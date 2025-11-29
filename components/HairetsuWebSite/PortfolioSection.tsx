@@ -232,6 +232,135 @@ export default function PortfolioSection({
               </span>
             </div>
           </div>
+          {/* Ad Meta */}
+          <div
+            className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
+            style={{
+              backgroundColor: "var(--window-bg)",
+              borderColor: "var(--window-border)",
+            }}
+          >
+            <div className="flex items-center justify-between mb-2 sm:mb-3">
+              <a
+                href="https://admeta.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base sm:text-lg font-semibold transition-colors hover:underline"
+                style={{
+                  color: "var(--taskbar-text)",
+                }}
+              >
+                Ad Meta
+              </a>
+              <a
+                href="https://admeta.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
+                style={{
+                  backgroundColor: "var(--color-purple-600)",
+                  color: "white",
+                }}
+              >
+                Visit →
+              </a>
+            </div>
+            <p
+              className="text-xs sm:text-sm font-medium mb-2"
+              style={{
+                color: "var(--color-purple-400)",
+                opacity: 0.9,
+              }}
+            >
+              Ad Campaign Platform
+            </p>
+            <p
+              className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow"
+              style={{
+                color: "var(--taskbar-text)",
+                opacity: 0.8,
+              }}
+            >
+              All-in-one platform to launch high-converting ad campaigns across
+              Facebook, Google, TikTok, and more. Paste your product link,
+              choose a template, and deploy multi-platform campaigns with one
+              click—eliminating the complexity of managing multiple ad
+              managers.
+            </p>
+            <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Next.js
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Redis
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Clickhouse
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Convex
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Postgres
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Cloudflare
+              </span>
+              <span
+                className="px-2 py-1 text-xs rounded-full font-medium"
+                style={{
+                  backgroundColor: "var(--taskbar-text)",
+                  color: "var(--window-bg)",
+                  opacity: 0.8,
+                }}
+              >
+                Go
+              </span>
+            </div>
+          </div>
+
           {/* Hiring.fm */}
           <div
             className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"

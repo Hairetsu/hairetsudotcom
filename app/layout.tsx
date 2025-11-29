@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -36,16 +35,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script
-        defer
-        src="https://track.hairetsu.com/analytics.js"
-        data-website-id="b0f5f270-3244-4000-8000-000000000000"
-        strategy="afterInteractive"
+          defer
+          src="https://track.hairetsu.com/analytics.js"
+          data-website-id="b0f5f270-3244-4000-8000-000000000000"
+          strategy="afterInteractive"
         />
-      </head>     
+      </head>
       <body
-
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > 
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
