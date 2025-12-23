@@ -232,7 +232,7 @@ export default function PortfolioSection({
               </span>
             </div>
           </div>
-          {/* Ad Meta */}
+          {/* Apex Ads */}
           <div
             className="group p-4 sm:p-6 rounded-lg border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col"
             style={{
@@ -242,7 +242,7 @@ export default function PortfolioSection({
           >
             <div className="flex items-center justify-between mb-2 sm:mb-3">
               <a
-                href="https://admeta.io"
+                href="https://apexads.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base sm:text-lg font-semibold transition-colors hover:underline"
@@ -250,10 +250,10 @@ export default function PortfolioSection({
                   color: "var(--taskbar-text)",
                 }}
               >
-                Ad Meta
+                Apex Ads
               </a>
               <a
-                href="https://admeta.io"
+                href="https://apexads.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200 hover:scale-110"
@@ -284,8 +284,7 @@ export default function PortfolioSection({
               All-in-one platform to launch high-converting ad campaigns across
               Facebook, Google, TikTok, and more. Paste your product link,
               choose a template, and deploy multi-platform campaigns with one
-              click—eliminating the complexity of managing multiple ad
-              managers.
+              click—eliminating the complexity of managing multiple ad managers.
             </p>
             <div className="flex flex-wrap gap-1 sm:gap-2 mt-auto">
               <span
